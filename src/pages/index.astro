@@ -9,40 +9,189 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<link rel="icon" type="image/svg+xml" href="/src/images/kuberin-icon.svg" />
+		<style>
+			.hero-container {
+				position: relative;
+				width: 100%;
+				max-width: 1000px;
+				aspect-ratio: 16 / 9;
+				margin: 3rem auto;
+				border: 4px solid #C9A961;
+				border-radius: 16px;
+				background: #1a3a52;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				box-shadow: 
+					0 0 30px rgba(201, 169, 97, 0.3),
+					inset 0 0 30px rgba(201, 169, 97, 0.1),
+					0 12px 48px rgba(0, 0, 0, 0.4);
+			}
+
+			.logo-wrapper {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 1;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+
+			.logo-wrapper img {
+				max-width: 100%;
+				max-height: 100%;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				filter: brightness(1.1) contrast(1.1);
+				mix-blend-mode: screen;
+				opacity: 0.95;
+			}
+
+			.principles-container {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+				z-index: 10;
+			}
+
+			.principle {
+				position: absolute;
+				width: 160px;
+				height: 160px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: bold;
+				font-size: 13px;
+				text-align: center;
+				padding: 14px;
+				border: 3px solid #C9A961;
+				background: radial-gradient(circle at 30% 30%, #2a2a2a, #0a0a0a);
+				transition: all 0.3s ease;
+				box-shadow: 
+					inset 0 0 30px rgba(0, 0, 0, 0.8),
+					inset 0 0 15px rgba(201, 169, 97, 0.2),
+					0 0 30px rgba(0, 0, 0, 0.6),
+					0 0 50px rgba(201, 169, 97, 0.2);
+				border-radius: 50%;
+			}
+
+			.principle::before {
+				content: '';
+				position: absolute;
+				width: 140px;
+				height: 140px;
+				border-radius: 50%;
+				background: radial-gradient(circle at 35% 35%, rgba(201, 169, 97, 0.15), transparent);
+				z-index: 1;
+			}
+
+			.principle:hover {
+				background: radial-gradient(circle at 30% 30%, #3a3a3a, #0a0a0a);
+				box-shadow: 
+					inset 0 0 40px rgba(0, 0, 0, 0.9),
+					inset 0 0 20px rgba(201, 169, 97, 0.3),
+					0 0 40px rgba(0, 0, 0, 0.7),
+					0 0 60px rgba(201, 169, 97, 0.3);
+				transform: scale(1.08);
+				border-color: #E8D5A4;
+			}
+
+			.principle-top-left {
+				top: -30px;
+				left: -30px;
+				z-index: 5;
+			}
+
+			.principle-top-right {
+				top: -30px;
+				right: -30px;
+				z-index: 5;
+			}
+
+			.principle-bottom-left {
+				bottom: -30px;
+				left: -30px;
+				z-index: 5;
+			}
+
+			.principle-bottom-right {
+				bottom: -30px;
+				right: -30px;
+				z-index: 5;
+			}
+
+			.principle-label {
+				font-size: 10px;
+				color: #E8D5A4;
+				margin-top: 5px;
+				letter-spacing: 0.8px;
+				font-weight: 600;
+			}
+
+			.principle-title {
+				font-size: 16px;
+				font-weight: 700;
+				color: #D4AF37;
+				letter-spacing: 1px;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>Welcome to Kuberin!</h1>
+			<div class="hero-container">
+				<div class="principles-container">
+					<div class="principle principle-top-left">
+						<div>
+							<div class="principle-title">MOAT</div>
+							<div class="principle-label">Competitive Edge</div>
+						</div>
+					</div>
+					<div class="principle principle-top-right">
+						<div>
+							<div class="principle-title">MANAGEMENT</div>
+							<div class="principle-label">Leadership Quality</div>
+						</div>
+					</div>
+					<div class="principle principle-bottom-left">
+						<div>
+							<div class="principle-title">MARGIN</div>
+							<div class="principle-label">Profitability</div>
+						</div>
+					</div>
+					<div class="principle principle-bottom-right">
+						<div>
+							<div class="principle-title">MOMENTUM</div>
+							<div class="principle-label">Growth Trajectory</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="logo-wrapper">
+				<img src="/src/images/kuberin.jpg" alt="Kuberin Logo" />
+				</div>
+			</div>
+
 			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
+				<strong>Kuberin</strong> applies Charlie Munger's 4 principles for investment and business analysis.
 			</p>
 			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
+				The Munger 4 Principles represent a time-tested framework for evaluating business quality:
 			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
 			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
+				<li><strong>MOAT</strong> - Sustainable competitive advantages</li>
+				<li><strong>MANAGEMENT</strong> - Quality and integrity of leadership</li>
+				<li><strong>MARGIN</strong> - Superior profitability metrics</li>
+				<li><strong>MOMENTUM</strong> - Consistent growth trajectory</li>
 			</ul>
 			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
+				Explore our blog to learn more about business analysis and investment principles.
 			</p>
 		</main>
 		<Footer />

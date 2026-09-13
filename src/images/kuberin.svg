@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%">
+  <defs>
+    <!-- Premium Antique Gold Gradient -->
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E6C567" />
+      <stop offset="25%" stop-color="#FDF0CD" />
+      <stop offset="50%" stop-color="#C5A059" />
+      <stop offset="75%" stop-color="#9A7228" />
+      <stop offset="100%" stop-color="#543D0B" />
+    </linearGradient>
+
+    <!-- Dark Textured Slate Background -->
+    <radialGradient id="slate-bg" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#181C22" />
+      <stop offset="100%" stop-color="#080A0E" />
+    </radialGradient>
+
+    <!-- Patina/Verdigris Accent for Inner Recesses -->
+    <linearGradient id="patina" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F3D33" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0D1E19" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Center Gemstone Refraction / Sphere Gradient -->
+    <radialGradient id="gem-sphere" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#7EA1C4" />
+      <stop offset="30%" stop-color="#2D4A66" />
+      <stop offset="70%" stop-color="#111B24" />
+      <stop offset="100%" stop-color="#06090D" />
+    </radialGradient>
+
+    <!-- Deep 3D Shadow Effect -->
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000" flood-opacity="0.75" />
+    </filter>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="800" height="800" fill="url(#slate-bg)" />
+
+  <!-- Subtle Geometric Background Rings -->
+  <g fill="none" stroke="url(#gold)" stroke-width="0.75" stroke-opacity="0.12">
+    <circle cx="400" cy="400" r="380" />
+    <circle cx="400" cy="400" r="330" />
+    <circle cx="400" cy="400" r="270" />
+  </g>
+
+  <!-- Main Yantra Graphic Group with Shadow -->
+  <g filter="url(#shadow)">
+
+    <!-- Bhupur: Outer Square Frame with 4 Cardinal Gateways -->
+    <g fill="none" stroke="url(#gold)" stroke-linejoin="round">
+      <!-- Outer Border -->
+      <rect x="220" y="220" width="360" height="360" stroke-width="4.5" />
+      <!-- Inner Thin Border Rule -->
+      <rect x="230" y="230" width="340" height="340" stroke-width="1.5" stroke-opacity="0.5" />
+
+      <!-- Top Gateway -->
+      <path d="M 365,220 L 365,190 L 435,190 L 435,220" stroke-width="4" />
+      <path d="M 380,190 L 380,175 L 420,175 L 420,190" stroke-width="2.5" />
+
+      <!-- Bottom Gateway -->
+      <path d="M 365,580 L 365,610 L 435,610 L 435,580" stroke-width="4" />
+      <path d="M 380,610 L 380,625 L 420,625 L 420,610" stroke-width="2.5" />
+
+      <!-- Left Gateway -->
+      <path d="M 220,365 L 190,365 L 190,435 L 220,435" stroke-width="4" />
+      <path d="M 190,380 L 175,380 L 175,420 L 190,420" stroke-width="2.5" />
+
+      <!-- Right Gateway -->
+      <path d="M 580,365 L 610,365 L 610,435 L 580,435" stroke-width="4" />
+      <path d="M 610,380 L 625,380 L 625,420 L 610,420" stroke-width="2.5" />
+    </g>
+
+    <!-- Outer Lotus Circle -->
+    <g fill="none" stroke="url(#gold)" stroke-width="2.5">
+      <circle cx="400" cy="400" r="195" />
+      <circle cx="400" cy="400" r="183" stroke-opacity="0.4" />
+    </g>
+
+    <!-- 8 Bold Lotus Petals with Patina Recess -->
+    <g fill="url(#patina)" stroke="url(#gold)" stroke-width="3">
+      <path d="M 400,205 Q 440,260 400,295 Q 360,260 400,205 Z" transform="rotate(0, 400, 400)" />
+      <path d="M 400,205 Q 440,260 400,295 Q 360,260 400,205 Z" transform="rotate(45, 400, 400)" />
+      <path d="M 400,205 Q 440,260 400,295 Q 360,260 400,205 Z" transform="rotate(90, 400, 400)" />
+      <path d="M 400,205 Q 440,260 400,295 Q 360,260 400,205 Z" transform="rotate(135, 400, 400)" />
+      <path d="M 400,205 Q 440,260 400,295 Q 360,260 400,205 Z" transform="rotate(180, 400, 400)" />
+      <path d="M 400,205 Q 440,260 400,295 Q 360,260 400,205 Z" transform="rotate(225, 400, 400)" />
+      <path d="M 400,205 Q 440,260 400,295 Q 360,260 400,205 Z" transform="rotate(270, 400, 400)" />
+      <path d="M 400,205 Q 440,260 400,295 Q 360,260 400,205 Z" transform="rotate(315, 400, 400)" />
+    </g>
+
+    <!-- Inner Boundary Ring -->
+    <g fill="none" stroke="url(#gold)" stroke-width="2.5">
+      <circle cx="400" cy="400" r="142" />
+    </g>
+
+    <!-- Kubera Yantra Interlocking Triangles Matrix (Clean, Bold, Balanced) -->
+    <g fill="none" stroke="url(#gold)" stroke-width="3" stroke-linejoin="round">
+      
+      <!-- Downward Triangles (Shakti / Manifestation) -->
+      <polygon points="400,520 250,270 550,270" stroke-width="3.5" />
+      <polygon points="400,465 300,300 500,300" stroke-width="2.5" />
+
+      <!-- Upward Triangles (Shiva / Wealth Accumulation) -->
+      <polygon points="400,280 265,505 535,505" stroke-width="3.5" />
+      <polygon points="400,325 315,460 485,460" stroke-width="2.5" />
+      <polygon points="400,370 355,430 445,430" stroke-width="2.5" />
+
+    </g>
+
+    <!-- Central Bindu Core (Reflective Landscape Sphere matching reference image) -->
+    <g>
+      <circle cx="400" cy="400" r="18" fill="url(#gem-sphere)" stroke="url(#gold)" stroke-width="3" />
+      <!-- Subtle internal reflection/landscape hint inside the orb -->
+      <path d="M 386,408 Q 400,396 414,408" fill="none" stroke="#7EA1C4" stroke-width="1.5" stroke-opacity="0.6" />
+      <!-- Specular Highlight -->
+      <circle cx="394" cy="394" r="3.5" fill="#FFF" opacity="0.85" />
+    </g>
+
+  </g>
+</svg>
