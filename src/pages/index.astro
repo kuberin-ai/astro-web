@@ -16,12 +16,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				max-width: 720px;
 				aspect-ratio: 16 / 9;
 				margin: 3rem auto;
-				border: 4px solid #C9A961;
-				border-radius: 16px;
-				background: #1a3a52;
 				display: flex;
 				align-items: center;
 				justify-content: center;
+			}
+
+			.hero-inner {
+				position: absolute;
+				inset: 0;
+				border: 4px solid #C9A961;
+				border-radius: 16px;
+				background: #000000;
 				overflow: hidden;
 				box-shadow: 
 					0 0 30px rgba(201, 169, 97, 0.3),
@@ -37,6 +42,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				position: absolute;
 				width: 100%;
 				height: 100%;
+				padding: 30px;
+				box-sizing: border-box;
 			}
 
 			.logo-wrapper img {
@@ -44,10 +51,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				max-height: 100%;
 				width: 100%;
 				height: 100%;
-				object-fit: cover;
+				object-fit: contain;
 				filter: brightness(1.1) contrast(1.1);
-				mix-blend-mode: screen;
-				opacity: 0.95;
+				opacity: 1;
 			}
 
 			.principles-container {
@@ -60,8 +66,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 			.principle {
 				position: absolute;
-				width: 160px;
-				height: 160px;
+				width: 130px;
+				height: 130px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -83,8 +89,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			.principle::before {
 				content: '';
 				position: absolute;
-				width: 140px;
-				height: 140px;
+				width: 110px;
+				height: 110px;
 				border-radius: 50%;
 				background: radial-gradient(circle at 35% 35%, rgba(201, 169, 97, 0.15), transparent);
 				z-index: 1;
@@ -102,26 +108,26 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			}
 
 			.principle-top-left {
-				top: -30px;
-				left: -30px;
+				top: 12px;
+				left: 12px;
 				z-index: 5;
 			}
 
 			.principle-top-right {
-				top: -30px;
-				right: -30px;
+				top: 12px;
+				right: 12px;
 				z-index: 5;
 			}
 
 			.principle-bottom-left {
-				bottom: -30px;
-				left: -30px;
+				bottom: 12px;
+				left: 12px;
 				z-index: 5;
 			}
 
 			.principle-bottom-right {
-				bottom: -30px;
-				right: -30px;
+				bottom: 12px;
+				right: 12px;
 				z-index: 5;
 			}
 
@@ -145,6 +151,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		<main>
 			<div class="hero-container">
+				<div class="hero-inner">
+					<div class="logo-wrapper">
+					<img src="/blog-placeholder-corp.jpg" alt="Kuberin Logo" />
+					</div>
+				</div>
+
 				<div class="principles-container">
 					<div class="principle principle-top-left">
 						<div>
@@ -170,10 +182,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 							<div class="principle-label">Growth Trajectory</div>
 						</div>
 					</div>
-				</div>
-				
-				<div class="logo-wrapper">
-				<img src="/blog-placeholder-kuberin.jpg" alt="Kuberin Logo" />
 				</div>
 			</div>
 
