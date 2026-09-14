@@ -5,7 +5,12 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2>
+			<a class="brand-link" href="/">
+				<img src="/favicon.svg" alt="" width="32" height="32" />
+				<span>{SITE_TITLE}</span>
+			</a>
+		</h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/portfolio">Portfolio</HeaderLink>
@@ -62,6 +67,17 @@ import { SITE_TITLE } from '../consts';
 	h2 a.active {
 		text-decoration: none;
 	}
+	.brand-link {
+		display: flex;
+		align-items: center;
+		gap: 0.45rem;
+	}
+	.brand-link img {
+		width: 32px;
+		height: 32px;
+		border-radius: 6px;
+		flex: none;
+	}
 	nav {
 		display: flex;
 		align-items: center;
@@ -84,6 +100,16 @@ import { SITE_TITLE } from '../consts';
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
+		}
+		nav a {
+			padding-inline: 0.35em;
+		}
+		.brand-link {
+			gap: 0.3rem;
+		}
+		.brand-link img {
+			width: 28px;
+			height: 28px;
 		}
 	}
 </style>

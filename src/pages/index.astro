@@ -68,6 +68,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				position: absolute;
 				width: 130px;
 				height: 130px;
+				box-sizing: border-box;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -144,6 +145,37 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				font-weight: 700;
 				color: #D4AF37;
 				letter-spacing: 1px;
+			}
+
+			@media (max-width: 520px) {
+				.hero-container {
+					aspect-ratio: 1;
+					margin: 1.5rem auto 2rem;
+				}
+
+				.logo-wrapper {
+					padding: 72px;
+				}
+
+				.principle {
+					width: 108px;
+					height: 108px;
+					padding: 10px;
+				}
+
+				.principle::before {
+					width: 90px;
+					height: 90px;
+				}
+
+				.principle-title {
+					font-size: 13px;
+				}
+
+				.principle-label {
+					font-size: 9px;
+					line-height: 1.25;
+				}
 			}
 		</style>
 	</head>
