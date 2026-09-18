@@ -68,6 +68,7 @@ Time.
 Imagine a child receiving a modest investment account at birth and leaving it untouched for decades. The amount matters and the rate of return matters, but the decisive advantage is the head start. At high rates of compounding, decades become overwhelmingly powerful, and the investor becomes progressively less dependent on making new contributions later. Time starts doing the heavy lifting.
 
 This is why policies that encourage investing early in life are so interesting to me. Whether the initial account is large or small, the real gift is the runway.
+Kudos to TRUMP for those trump accounts. Every child can become a trillionaire in their liftime from COMLB26 !!!
 
 ---
 
